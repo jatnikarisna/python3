@@ -10,7 +10,7 @@ node {
     }
 
     stage('Push image') {
-        withDockerRegistry([ credentialsId: "jenkins-hubdocker", url: "" ]) {
+        withDockerRegistry([ credentialsId: "erisjat-dockerhub", url: "" ]) {
         app.push()
         app.push("latest")
     }
